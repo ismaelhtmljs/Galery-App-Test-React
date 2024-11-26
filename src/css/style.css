@@ -1,28 +1,36 @@
+/* Reseteo y box-sizing global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Enlaces */
 a {
     text-decoration: none;
 }
 
-/* Para Firefox */
+/* Estilo para el HTML */
 html {
+    scroll-behavior: smooth;
+    scroll-padding: 25px;
     scrollbar-color: rgb(40, 178, 178) #a71ba7;
+    /* Estilo para Firefox */
 }
 
+/* Selección de texto */
 ::selection {
     background-color: rgba(150, 28, 150, 0.519);
 }
 
+/* Estilo general para párrafos */
 p {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
+/* Estilo general para el body */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(45deg, #2b8bb7, #6acbcb, #5b5bc3, #00ffff);
@@ -34,6 +42,7 @@ body {
     /* Asegura que el fondo no se repita */
 }
 
+/* Animación de fondo */
 @keyframes gradient-bg {
     0% {
         background-position: 0% 50%;
@@ -64,7 +73,6 @@ body {
     color: #fff;
     background-color: rgb(0, 0, 0);
     height: 100vh;
-    /* Ocupa toda la pantalla */
     flex-direction: column;
 }
 
@@ -95,6 +103,7 @@ body {
     animation-delay: 0.6s;
 }
 
+/* Animación de los puntos del cargador */
 @keyframes loading-animation {
 
     0%,
@@ -109,7 +118,7 @@ body {
     }
 }
 
-/* header */
+/* Header */
 header {
     background: #3333338e;
     color: #fff;
@@ -132,8 +141,7 @@ header {
     height: auto;
 }
 
-/* navigation bar */
-
+/* Navigation bar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -157,8 +165,7 @@ nav ul {
     text-decoration: underline;
 }
 
-/* main del blog */
-
+/* Main content */
 main {
     max-width: 50%;
     margin: 0 auto;
@@ -178,8 +185,7 @@ main {
     font-size: 18px;
 }
 
-/* footer del blog */
-
+/* Footer */
 footer {
     background: #181717bc;
     color: #fff;
@@ -203,13 +209,11 @@ footer {
     margin-top: 15px;
 }
 
-/* media queri del blog */
+/* Media Queries */
 @media screen and (max-width: 320px) {
     body {
-        background-size: 600% 600%;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        /* Asegura que no se repita el fondo */
     }
 
     .subtitulo-post1 h2 {
@@ -269,7 +273,6 @@ footer {
     body {
         background-attachment: fixed;
         background-repeat: no-repeat;
-        /* No repetimos el fondo */
     }
 
     .titulo img {
@@ -277,7 +280,7 @@ footer {
     }
 
     .titulo h1 {
-        margin-bottom: 5%
+        margin-bottom: 5%;
     }
 
     nav {
@@ -293,7 +296,6 @@ footer {
     body {
         background-attachment: fixed;
         background-repeat: no-repeat;
-        /* No repetimos el fondo */
     }
 
     .img-logo {
@@ -325,7 +327,6 @@ footer {
     body {
         background-attachment: fixed;
         background-repeat: no-repeat;
-        /* Fondo sin repetir */
     }
 
     nav {
@@ -353,7 +354,6 @@ footer {
     body {
         background-attachment: fixed;
         background-repeat: no-repeat;
-        /* Fondo sin repetir */
     }
 
     nav {
