@@ -1,60 +1,32 @@
-/* Reseteo y box-sizing global */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Enlaces */
-a {
+a{
     text-decoration: none;
 }
-
-/* Estilo para el HTML */
+/* Para Firefox */
 html {
-    scroll-behavior: smooth;
-    scroll-padding: 25px;
     scrollbar-color: rgb(40, 178, 178) #a71ba7;
-    /* Estilo para Firefox */
 }
 
-/* Selección de texto */
-::selection {
+::selection{
     background-color: rgba(150, 28, 150, 0.519);
 }
 
-/* Estilo general para párrafos */
-p {
+p{
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/* Estilo general para el body */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #2b8bb7, #6acbcb, #5b5bc3, #00ffff);
-    background-size: 600% 600%;
-    background-attachment: fixed;
+    background: linear-gradient(45deg, #1e2a47, #3f1c75, #0093d1, #61dafb);
+    background-size: 400% 400%;
     height: 100vh;
-    animation: gradient-bg 5s ease infinite;
-    background-repeat: no-repeat;
-    /* Asegura que el fondo no se repita */
-}
-
-/* Animación de fondo */
-@keyframes gradient-bg {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 /* Cargador de la página web */
@@ -73,6 +45,7 @@ body {
     color: #fff;
     background-color: rgb(0, 0, 0);
     height: 100vh;
+    /* Ocupa toda la pantalla */
     flex-direction: column;
 }
 
@@ -103,7 +76,6 @@ body {
     animation-delay: 0.6s;
 }
 
-/* Animación de los puntos del cargador */
 @keyframes loading-animation {
 
     0%,
@@ -118,37 +90,38 @@ body {
     }
 }
 
-/* Header */
-header {
+/* header */
+header{
     background: #3333338e;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.titulo {
+.titulo{
     display: flex;
     gap: 15px;
     font-size: 30px;
 }
 
-.img-logo {
+.img-logo{
     width: 50px;
     display: flex;
     cursor: pointer;
     border-radius: 60%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     height: auto;
 }
 
-/* Navigation bar */
-nav {
+/* navigation bar */
+
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul {
+nav ul{
     display: flex;
     list-style: none;
     margin: 0;
@@ -156,202 +129,175 @@ nav ul {
     gap: 25px;
 }
 
-.contenedor-lista a {
+.contenedor-lista a{
     color: #ffffff;
     font-size: 19px;
 }
 
-.contenedor-lista a:hover {
+.contenedor-lista a:hover{
     text-decoration: underline;
 }
 
-/* Main content */
-main {
+/* main del blog */
+
+main{
     max-width: 50%;
     margin: 0 auto;
     padding: 20px;
 }
 
-.contenido-post1 {
+.contenido-post1{
     margin-bottom: 20px;
     text-align: justify;
 }
 
-.contenido-post1 p {
+.contenido-post1 p{
     font-size: 20px;
 }
 
-.subtitulo-post1 {
+.subtitulo-post1{
     font-size: 18px;
 }
 
-/* Footer */
-footer {
+/* footer del blog */
+
+footer{
     background: #181717bc;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.descripcion {
+.descripcion{
     font-size: 15px;
     margin-bottom: 15px;
     word-wrap: break-word;
 }
 
-.titulo-footer {
+.titulo-footer{
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-.copy {
+.copy{
     font-size: 25px;
     margin-top: 15px;
 }
 
-/* Media Queries */
+/* media queri del blog */
 @media screen and (max-width: 320px) {
-
-    .subtitulo-post1 h2 {
+    .subtitulo-post1 h2{
         font-size: 25px;
     }
-
-    .titulo img {
+    .titulo img{
         display: none;
     }
-
-    .titulo {
+    .titulo{
         font-size: 25px;
         gap: 0;
         justify-content: center;
         align-items: center;
         display: flex;
     }
-
-    .titulo h1 {
+    .titulo h1{
         margin-bottom: 5%;
     }
-
-    nav {
+    nav{
         flex-direction: column;
     }
-
-    nav ul {
+    nav ul{
         flex-direction: column;
     }
-
-    nav ul li {
+    nav ul li{
         margin-bottom: 10px;
     }
-
-    nav ul li a {
+    
+    nav ul li a{
         font-size: 15px;
     }
-
-    main {
+    
+    main{
         max-width: 100%;
     }
-
-    footer {
+    
+    footer{
         padding: 10px;
     }
-
-    footer.descripcion {
+    footer.descripcion{
         font-size: 13px;
     }
-
-    footer.copy {
+    
+    footer.copy{
         font-size: 14px;
     }
 }
 
 @media screen and (min-width: 360px) and (max-width: 424px) {
-
-    .titulo img {
+    .titulo img{
         display: none;
     }
-
-    .titulo h1 {
-        margin-bottom: 5%;
+    .titulo h1{
+        margin-bottom: 5%
     }
-
-    nav {
+    nav{
         flex-direction: column;
     }
-
-    main {
+    main{
         max-width: 100%;
     }
 }
-
 @media screen and (min-width: 425px) and (max-width: 480px) {
-
-    .img-logo {
+    .img-logo{
         position: absolute;
         margin-left: 38.5%;
         height: auto;
         width: 17%;
     }
-
-    .titulo h1 {
+    .titulo h1{
         margin-top: 20%;
         margin-bottom: 5%;
     }
-
-    nav {
+    nav{
         flex-direction: column;
     }
-
-    main {
+    main{
         max-width: 100%;
     }
-
-    .subtitulo-post1 h2 {
+    .subtitulo-post1 h2{
         text-align: center;
     }
 }
-
 @media screen and (min-width: 481px) and (max-width: 768px) {
-
-    nav {
+    nav{
         flex-direction: column;
     }
-
-    main {
+    main{
         max-width: 100%;
     }
-
-    footer {
+    footer{
         padding: 10px;
     }
-
-    footer.descripcion {
+    footer.descripcion{
         font-size: 13px;
     }
-
-    footer.copy {
+    footer.copy{
         font-size: 14px;
     }
 }
-
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    nav {
+    nav{
         flex-direction: column;
     }
-
-    main {
+    main{
         max-width: 100%;
     }
-
-    footer {
+    footer{
         padding: 10px;
     }
-
-    footer.descripcion {
+    footer.descripcion{
         font-size: 13px;
     }
-
-    footer.copy {
+    footer.copy{
         font-size: 14px;
     }
 }
