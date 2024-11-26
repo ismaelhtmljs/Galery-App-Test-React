@@ -15,20 +15,26 @@
     Por favor, gira tu dispositivo a modo vertical para ver el contenido.
   </div>
   <script>
+    // Variable para controlar si el alerta está activo o no
+    let alertActive = false;
+
     function showAlertIfLandscape() {
       // Verifica si el dispositivo está en orientación horizontal
       if (window.orientation === 90 || window.orientation === -90) {
-        alert("Por favor, gira tu dispositivo a modo vertical.");
-        // Llama a la función nuevamente después de que se cierre la alerta
-        showAlertIfLandscape();
+        // Si aún no se ha mostrado el alert, lo muestra
+        if (!alertActive) {
+          alertActive = true; // Marca que el alert está activo
+          alert("Por favor, gira tu dispositivo a modo vertical.");
+        }
+      } else {
+        // Si el dispositivo está en orientación vertical, desactiva el alert
+        alertActive = false;
       }
     }
 
     // Detecta el cambio de orientación y ejecuta la función
     window.addEventListener("orientationchange", function () {
-      if (window.orientation === 90 || window.orientation === -90) {
-        showAlertIfLandscape();
-      }
+      showAlertIfLandscape();
     });
 
     // Inicializa la verificación cuando la página se carga
