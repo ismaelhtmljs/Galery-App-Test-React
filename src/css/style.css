@@ -1,22 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 /* Para Firefox */
 html {
     scrollbar-color: rgb(40, 178, 178) #a71ba7;
 }
 
-::selection{
+::selection {
     background-color: rgba(150, 28, 150, 0.519);
 }
 
-p{
+p {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -24,20 +25,24 @@ p{
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg,#2b8bb7,#6acbcb,#5b5bc3,#00ffff);
-    background-size: 400% 400%;
+    background: linear-gradient(45deg, #2b8bb7, #6acbcb, #5b5bc3, #00ffff);
+    background-size: 600% 600%;
     background-attachment: fixed;
     height: 100vh;
     animation: gradient-bg 5s ease infinite;
+    background-repeat: no-repeat;
+    /* Asegura que el fondo no se repita */
 }
 
 @keyframes gradient-bg {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -105,37 +110,37 @@ body {
 }
 
 /* header */
-header{
+header {
     background: #3333338e;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.titulo{
+.titulo {
     display: flex;
     gap: 15px;
     font-size: 30px;
 }
 
-.img-logo{
+.img-logo {
     width: 50px;
     display: flex;
     cursor: pointer;
     border-radius: 60%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     height: auto;
 }
 
 /* navigation bar */
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     margin: 0;
@@ -143,191 +148,231 @@ nav ul{
     gap: 25px;
 }
 
-.contenedor-lista a{
+.contenedor-lista a {
     color: #ffffff;
     font-size: 19px;
 }
 
-.contenedor-lista a:hover{
+.contenedor-lista a:hover {
     text-decoration: underline;
 }
 
 /* main del blog */
 
-main{
+main {
     max-width: 50%;
     margin: 0 auto;
     padding: 20px;
 }
 
-.contenido-post1{
+.contenido-post1 {
     margin-bottom: 20px;
     text-align: justify;
 }
 
-.contenido-post1 p{
+.contenido-post1 p {
     font-size: 20px;
 }
 
-.subtitulo-post1{
+.subtitulo-post1 {
     font-size: 18px;
 }
 
 /* footer del blog */
 
-footer{
+footer {
     background: #181717bc;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.descripcion{
+.descripcion {
     font-size: 15px;
     margin-bottom: 15px;
     word-wrap: break-word;
 }
 
-.titulo-footer{
+.titulo-footer {
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-.copy{
+.copy {
     font-size: 25px;
     margin-top: 15px;
 }
 
 /* media queri del blog */
 @media screen and (max-width: 320px) {
-    body{
-        background-size: 600% 600% cover;
+    body {
+        background-size: 600% 600%;
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* Asegura que no se repita el fondo */
     }
-    .subtitulo-post1 h2{
+
+    .subtitulo-post1 h2 {
         font-size: 25px;
     }
-    .titulo img{
+
+    .titulo img {
         display: none;
     }
-    .titulo{
+
+    .titulo {
         font-size: 25px;
         gap: 0;
         justify-content: center;
         align-items: center;
         display: flex;
     }
-    .titulo h1{
+
+    .titulo h1 {
         margin-bottom: 5%;
     }
-    nav{
+
+    nav {
         flex-direction: column;
     }
-    nav ul{
+
+    nav ul {
         flex-direction: column;
     }
-    nav ul li{
+
+    nav ul li {
         margin-bottom: 10px;
     }
-    
-    nav ul li a{
+
+    nav ul li a {
         font-size: 15px;
     }
-    
-    main{
+
+    main {
         max-width: 100%;
     }
-    
-    footer{
+
+    footer {
         padding: 10px;
     }
-    footer.descripcion{
+
+    footer.descripcion {
         font-size: 13px;
     }
-    
-    footer.copy{
+
+    footer.copy {
         font-size: 14px;
     }
 }
 
 @media screen and (min-width: 360px) and (max-width: 424px) {
-    body{
+    body {
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* No repetimos el fondo */
     }
-    .titulo img{
+
+    .titulo img {
         display: none;
     }
-    .titulo h1{
+
+    .titulo h1 {
         margin-bottom: 5%
     }
-    nav{
+
+    nav {
         flex-direction: column;
     }
-    main{
+
+    main {
         max-width: 100%;
     }
 }
+
 @media screen and (min-width: 425px) and (max-width: 480px) {
-    body{
+    body {
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* No repetimos el fondo */
     }
-    .img-logo{
+
+    .img-logo {
         position: absolute;
         margin-left: 38.5%;
         height: auto;
         width: 17%;
     }
-    .titulo h1{
+
+    .titulo h1 {
         margin-top: 20%;
         margin-bottom: 5%;
     }
-    nav{
+
+    nav {
         flex-direction: column;
     }
-    main{
+
+    main {
         max-width: 100%;
     }
-    .subtitulo-post1 h2{
+
+    .subtitulo-post1 h2 {
         text-align: center;
     }
 }
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    body{
+    body {
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* Fondo sin repetir */
     }
-    nav{
+
+    nav {
         flex-direction: column;
     }
-    main{
+
+    main {
         max-width: 100%;
     }
-    footer{
+
+    footer {
         padding: 10px;
     }
-    footer.descripcion{
+
+    footer.descripcion {
         font-size: 13px;
     }
-    footer.copy{
+
+    footer.copy {
         font-size: 14px;
     }
 }
+
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    body{
+    body {
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        /* Fondo sin repetir */
     }
-    nav{
+
+    nav {
         flex-direction: column;
     }
-    main{
+
+    main {
         max-width: 100%;
     }
-    footer{
+
+    footer {
         padding: 10px;
     }
-    footer.descripcion{
+
+    footer.descripcion {
         font-size: 13px;
     }
-    footer.copy{
+
+    footer.copy {
         font-size: 14px;
     }
 }
