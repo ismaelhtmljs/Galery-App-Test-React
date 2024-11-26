@@ -24,9 +24,8 @@ p{
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #1e2a47, #3f1c75, #0093d1, #61dafb);
-    background-size: 400% 400%;
-    height: 100vh;
+    background: linear-gradient(45deg, #6a8dff, #9b59b6);
+    background-size: 600% 600%;
 }
 
 /* Cargador de la página web */
