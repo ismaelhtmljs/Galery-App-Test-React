@@ -211,10 +211,6 @@ footer {
 
 /* Media Queries */
 @media screen and (max-width: 320px) {
-    body {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
 
     .subtitulo-post1 h2 {
         font-size: 25px;
@@ -270,10 +266,6 @@ footer {
 }
 
 @media screen and (min-width: 360px) and (max-width: 424px) {
-    body {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
 
     .titulo img {
         display: none;
@@ -293,10 +285,6 @@ footer {
 }
 
 @media screen and (min-width: 425px) and (max-width: 480px) {
-    body {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
 
     .img-logo {
         position: absolute;
@@ -324,10 +312,6 @@ footer {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    body {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
 
     nav {
         flex-direction: column;
@@ -351,11 +335,6 @@ footer {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    body {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }
-
     nav {
         flex-direction: column;
     }
