@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Cielo -->
+  <rect width="200" height="200" fill="#87CEEB" />
+  
+  <!-- Montañas -->
+  <polygon points="0,150 50,50 100,150" fill="#2E8B57" />
+  <polygon points="100,150 150,30 200,150" fill="#228B22" />
+  <polygon points="50,150 100,100 150,150" fill="#006400" />
+  
+  <!-- Nieve en las montañas -->
+  <polygon points="60,80 100,100 80,110" fill="white" />
+  <polygon points="140,60 160,80 120,90" fill="white" />
+  
+  <!-- Sol -->
+  <circle cx="160" cy="40" r="30" fill="yellow" />
+</svg>
