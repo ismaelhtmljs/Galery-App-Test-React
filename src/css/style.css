@@ -300,30 +300,3 @@ footer{
         font-size: 14px;
     }
 }
-/* Estilo cuando el dispositivo está en orientación horizontal (landscape) */
-@media (orientation: landscape) {
-    body {
-        overflow: hidden;
-        /* Bloquea el desplazamiento */
-    }
-
-    /* Mensaje que se muestra cuando el dispositivo está en horizontal */
-    .landscape-message {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 20px;
-        font-size: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
-}
-
-/* Inicialmente, el mensaje está oculto */
-.landscape-message {
-    display: none;
-}

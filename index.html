@@ -15,12 +15,26 @@
     Por favor, gira tu dispositivo a modo vertical para ver el contenido.
   </div>
   <script>
-    window.addEventListener("orientationchange", function () {
+    function showAlertIfLandscape() {
+      // Verifica si el dispositivo está en orientación horizontal
       if (window.orientation === 90 || window.orientation === -90) {
         alert("Por favor, gira tu dispositivo a modo vertical.");
+        // Llama a la función nuevamente después de que se cierre la alerta
+        showAlertIfLandscape();
+      }
+    }
+
+    // Detecta el cambio de orientación y ejecuta la función
+    window.addEventListener("orientationchange", function () {
+      if (window.orientation === 90 || window.orientation === -90) {
+        showAlertIfLandscape();
       }
     });
+
+    // Inicializa la verificación cuando la página se carga
+    showAlertIfLandscape();
   </script>
+
   <script type="module" src="/src/layout/main.jsx"></script>
 </body>
 
