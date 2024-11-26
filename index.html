@@ -11,6 +11,16 @@
 
 <body>
   <div id="root"></div>
+  <div class="landscape-message">
+    Por favor, gira tu dispositivo a modo vertical para ver el contenido.
+  </div>
+  <script>
+    window.addEventListener("orientationchange", function () {
+      if (window.orientation === 90 || window.orientation === -90) {
+        alert("Por favor, gira tu dispositivo a modo vertical.");
+      }
+    });
+  </script>
   <script type="module" src="/src/layout/main.jsx"></script>
 </body>
 
