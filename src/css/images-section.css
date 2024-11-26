@@ -1,0 +1,269 @@
+span{
+    font-size: 25px;
+    color: #fff;
+}
+
+.contenedor-pag-images{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.669);
+}
+
+.images-main{
+    display: grid;
+        position: absolute;
+        top: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 5%;
+        margin: 10% 20% auto 20%;
+}
+
+.contenedor-images-1 img,
+.contenedor-images-2 img,
+.contenedor-images-3 img{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: auto;
+    width: 379px;
+}
+
+.contenedor-images-1,
+.contenedor-images-2,
+.contenedor-images-3{
+    display: flex;
+        flex-direction: column;
+        gap: 2%;
+}
+
+.contenedor-images-1{
+    grid-area: "images 1";
+}
+
+.contenedor-images-2{
+    grid-area: "images 2";
+}
+
+.contenedor-images-3{
+    grid-area: "images 3";
+}
+
+/* Cargador de la página web */
+.loading-screen-images {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: fixed;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.963);
+    z-index: 9999;
+}
+
+.loader-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-dots div {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #00ffff;
+    border-radius: 50%;
+    animation: loading-animation 1.5s infinite ease-in-out;
+}
+
+.loader-dots div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader-dots div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader-dots div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes loading-animation {
+
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* media queris para el blog */
+
+@media screen and (max-width: 320px) {
+    .images-main{
+        display: contents;
+        margin: 10% 10% auto 10%;
+    }
+    .contenedor-main-content{
+        padding: 15px;
+    }
+    header{
+        margin-bottom: 10%;
+    }
+    main{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img{
+        width: 100%;
+        height: auto;
+    }
+    span{
+        font-size: 18px;
+    }
+    .contenedor-images-1,
+    .contenedor-images-2 ,
+    .contenedor-images-3{
+        margin-bottom: 25%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 424px) {
+    .images-main{
+        display: contents;
+        margin: 10% 10% auto 10%;
+    }
+    .contenedor-main-content {
+        padding: 15px;
+    }
+    header {
+        margin-bottom: 10%;
+    }
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img {
+        width: 100%;
+        height: auto;
+    }
+    .contenedor-images-1,
+    .contenedor-images-2,
+    .contenedor-images-3 {
+        margin-bottom: 25%;
+    }
+}
+@media screen and (min-width: 425px) and (max-width: 480px) {
+    .images-main{
+        display: contents;
+        margin: 10% 10% auto 10%;
+    }
+    .contenedor-main-content {
+        padding: 15px;
+    }
+
+    header {
+        margin-bottom: 10%;
+    }
+
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenedor-images-1,
+    .contenedor-images-2,
+    .contenedor-images-3 {
+        margin-bottom: 25%;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .images-main {
+        display: contents;
+        margin: 10% 10% auto 10%;
+    }
+
+    .contenedor-main-content {
+        padding: 15px;
+    }
+
+    header {
+        margin-bottom: 10%;
+    }
+
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenedor-images-1,
+    .contenedor-images-2,
+    .contenedor-images-3 {
+        margin-bottom: 25%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .images-main{
+        display: grid;
+        margin-top: 15%;
+        margin-left: 5%;
+        grid-template-areas: 
+            "images1 images2 images3";
+    }
+    header {
+        margin-bottom: 10%;
+    }
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img {
+        width: 269px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1519px) {
+    .images-main {
+        display: grid;
+        margin-top: 8%;
+        grid-template-areas:
+            "images1 images2 images3";
+    }
+
+    .contenedor-main-content{
+        padding: 20px;
+        margin-left: 5%;
+    }
+
+    header {
+        margin-bottom: 10%;
+    }
+
+    .contenedor-images-1 img,
+    .contenedor-images-2 img,
+    .contenedor-images-3 img {
+        width: 269px;
+        height: auto;
+    }
+}

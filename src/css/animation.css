@@ -1,0 +1,32 @@
+/* Pantalla de carga: Widget que cubre toda la pantalla */
+.widget-for-animation {
+    position: absolute;
+    /* Asegura que esté en la parte superior */
+    top: 0;
+    /* Empieza en la parte superior */
+    left: 0;
+    /* Empieza desde el lado izquierdo */
+    width: 100%;
+    /* Ancho completo de la pantalla */
+    height: 100vh;
+    /* Alto completo de la pantalla */
+    background-color: rgb(50, 50, 163);
+    /* Color de fondo azul */
+    z-index: 1000;
+    /* Se muestra encima de todo */
+    animation: backgroundAnimation .5s ease-in-out forwards;
+    transition: ease-in-out;
+}
+
+/* Animación que mueve el widget de la pantalla */
+@keyframes backgroundAnimation {
+    from {
+        transform: translateX(0);
+        /* Empieza en su posición inicial */
+    }
+
+    to {
+        transform: translateX(-100%);
+        visibility: hidden;
+    }
+}
