@@ -8,7 +8,7 @@ function Header() {
             <nav className="navbar">
                 <div className="titulo">
                     <img src="/vite.svg" alt="logo" className="img-logo"/>
-                    <h1>Fotos De Montañas</h1>
+                    <h1>Galeria De Montañas</h1>
                 </div>
                 <div className="contenedor-lista">
                     <ul>
