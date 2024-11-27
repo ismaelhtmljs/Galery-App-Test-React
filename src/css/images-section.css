@@ -3,6 +3,13 @@ span{
     color: #fff;
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: monospace;
+}
+
 .contenedor-pag-images{
     position: fixed;
     top: 0;
@@ -15,12 +22,12 @@ span{
 
 .images-main{
     display: grid;
-        position: absolute;
-        top: 0;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-column-gap: 5%;
-        margin: 10% 20% auto 20%;
+    position: absolute;
+    top: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 5%;
+    margin: 10% 20% auto 18.5%;
 }
 
 .contenedor-images-1 img,
@@ -112,8 +119,34 @@ span{
     }
 }
 
-/* media queris para el blog */
+.buton-section{
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border: 2px solid #43298f;
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #43298f;
+    transition: 1s ease-in-out;
+    border-radius: 10px;
+    width: 260px;
+    height: auto;
+}
 
+.buton-section::after{
+    content: "➡️";
+    position: absolute;
+    transition: .4s ease-in-out;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.buton-section:hover::after{
+    opacity: 1;   
+}
+
+/* media queris para el blog */
 @media screen and (max-width: 320px) {
     .images-main{
         display: contents;
@@ -227,7 +260,7 @@ span{
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
     .images-main{
         display: grid;
-        margin-top: 15%;
+        margin-top: 20%;
         margin-left: 5%;
         grid-template-areas: 
             "images1 images2 images3";
@@ -241,12 +274,15 @@ span{
         width: 269px;
         height: auto;
     }
+    .buton-section{
+        margin-top: -7%;
+    }
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1519px) {
     .images-main {
         display: grid;
-        margin-top: 8%;
+        margin-top: 12%;
         grid-template-areas:
             "images1 images2 images3";
     }
@@ -265,5 +301,9 @@ span{
     .contenedor-images-3 img {
         width: 269px;
         height: auto;
+    }
+
+    .buton-section{
+        margin-top: -10%;
     }
 }

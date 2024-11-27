@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+    <!-- Triángulo de fondo rojo -->
+    <polygon points="150,50 50,250 250,250" fill="red" />
+    
+    <!-- Texto "404" dentro del triángulo -->
+    <text x="50%" y="55%" font-family="Arial" font-size="50" fill="white" text-anchor="middle" dy=".3em">404</text>
+    
+    <!-- Texto "Recurso no encontrado" debajo del triángulo con un top de 10px -->
+    <text x="50%" y="85%" font-family="Arial" font-size="20" fill="white" text-anchor="middle" dy="20">Recurso no encontrado</text>
+</svg>

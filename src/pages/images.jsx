@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import '../css/images-section.css';
+import { Link } from "react-router-dom";
 
 function Images() {
     const [loading, setLoading] = useState(true);  // Estado de la pantalla de carga
@@ -74,6 +75,9 @@ function Images() {
                         </section>
                     </div>
                 </main>
+                <div className="buton-section">
+                        <Link to = "/images-second-pag">Siguiente Pagina</Link>
+                </div>
             </div>
         </>
     )

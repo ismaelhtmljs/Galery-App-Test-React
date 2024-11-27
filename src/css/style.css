@@ -300,3 +300,19 @@ footer{
         font-size: 14px;
     }
 }
+
+@media (max-width: 767px) {
+    .img-logo{
+        position: absolute;
+        margin-left: 29.5%;
+        height: auto;
+        width: 17%;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .titulo h1{
+        margin-top: 20%;
+        margin-bottom: 5%;
+    }
+}
